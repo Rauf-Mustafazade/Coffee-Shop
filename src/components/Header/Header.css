@@ -1,0 +1,79 @@
+header {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #30261C;
+    color: white;
+    width: 100%;
+}
+
+.header-all {
+    margin: 0 auto;
+    width: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+
+    h1 {
+        a {
+            color: white;
+
+        }
+    }
+
+    nav {
+        ul {
+            display: flex;
+            gap: 7%;
+            font-size: 20px;
+            transition: transform 0.3s, color 0.3s;
+
+
+            li {
+                a {
+                    color: white;
+                }
+
+            }
+        }
+    }
+
+
+    nav ul li:hover {
+        color: rgb(130, 77, 77);
+        transform: scale(0.9);
+    }
+
+    nav ul a:hover {
+        color: rgb(130, 77, 77);
+    }
+
+    .login {
+
+        width: 100px;
+        height: 40px;
+        background-color: rgb(153 132 132);
+        border-radius: 10px;
+        border: none;
+
+
+        a {
+            color: white;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+    }
+
+    .login:hover {
+        cursor: pointer;
+        background-color: aliceblue;
+
+        a {
+            color: black;
+        }
+
+    }
+}

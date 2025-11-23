@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.home-back {
+    background-image: url("../../assets/background.png");
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-size: cover;
+    background-position: 22% bottom;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.home-word {
+    width: 430px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding-left: 10%;
+
+    h1 {
+        font-size: 55px;
+        line-height: 62px;
+    }
+
+    h5 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    .order {
+        width: 45%;
+        height: 55px;
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 15px;
+        cursor: pointer;
+        border: none;
+
+    }
+}
+
+.cup {
+    height: 170px;
+    width: 100%;
+    background-color: #DCD3C3;
+    display: flex;
+}
+
+.cup-all {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13%;
+
+    img {
+        width: 96px;
+        height: 125px;
+    }
+}
+
+.beans {
+    width: 100%;
+    height: 335px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #E2D9C8;
+
+    img {
+        height: 335px;
+        width: 525px;
+    }
+    .beans-center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        h1{
+            font-size: 40px;
+        }
+        button{
+            width: 250px;
+            height: 51px;
+            background-color: #30261C;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.beans2 {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #E2D9C8;
+
+    img {
+        height: 320px;
+        width: 525px;
+    }
+    .beans-center2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 32px;
+        }
+        p{
+            font-size: 18px;
+            margin-top: 3%;
+        }
+        button{
+            width: 138px;
+            height: 44px;
+            background-color: #30261C;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+           
+        }
+        input{
+            width: 364px;
+            height: 44px;
+            border-radius: 30px;
+            border: none;
+        }
+    }
+    .input-button{
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 5%;
+    }
+}

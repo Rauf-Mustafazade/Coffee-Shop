@@ -1,0 +1,337 @@
+.contact {
+    /* margin-bottom: 7%; */
+    /* margin-top: 7%; */
+    background-color: white;
+    height: 640px;
+    padding-top: 5%;
+}
+
+.contacts {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+}
+
+
+.leave {
+
+    width: 100%;
+}
+
+.contacts-us {
+    margin-right: 3%;
+}
+
+.contacts-us .icon {
+    height: 74px;
+    width: 74px;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 94px;
+    float: left;
+    margin-right: 28px;
+}
+
+.contacts-us .word {
+    margin-top: -5%;
+    width: 36vh;
+}
+
+.contacts-us .word h5 {
+    color: #bdbdbd;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.contacts-us .word p {
+    margin-bottom: 0;
+    color: #111111;
+    font-size: 18px;
+}
+
+.con h4 {
+    font-weight: 600;
+    color: #111111;
+    text-transform: uppercase;
+    margin-bottom: 47px;
+    font-size: 24px;
+}
+
+.location {
+    display: flex;
+    padding: 0 0 5% 0;
+}
+
+.phone {
+    display: flex;
+    padding: 0 0 5% 0;
+}
+
+.mail {
+    display: flex;
+}
+
+.leaves {
+    font-weight: 600;
+    color: #111111;
+    text-transform: uppercase;
+    margin-bottom: 47px;
+    font-size: 24px;
+}
+
+/* .inputt {
+    width: 120vh;
+} */
+
+.inputt input {
+    width: 44%;
+    height: 51px;
+    border: 1px solid #e1e1e1;
+    padding-left: 20px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.inputt textarea {
+    width: 93%;
+    border-color: #bdbdbd;
+    font-size: 19px;
+    padding: 12px;
+}
+
+#send {
+
+    width: 24%;
+    height: 7vh;
+    font-size: 16px;
+    color: #ffffff;
+    background: #30261C;
+    border: none;
+    border-radius: 30px;
+
+}
+
+
+button:hover {
+    cursor: pointer;
+}
+
+.iinput {
+    margin-top: 3%;
+}
+
+
+
+/* ===================== 1024px ↓ ===================== */
+@media (max-width: 1024px) {
+
+    .contacts {
+        width: 90%;
+    }
+
+    .contacts-us .word {
+        width: auto;
+    }
+
+    .inputt textarea {
+        width: 100%;
+    }
+}
+
+
+/* ===================== 900px ↓ (Tablet) ===================== */
+@media (max-width: 900px) {
+
+    .contact {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+    }
+
+    .contacts-us {
+        margin-right: 0;
+    }
+
+    /* Icon mərkəzə keçir */
+    .contacts-us .icon {
+        float: none;
+        margin: 0 auto 20px auto;
+        line-height: 74px;
+    }
+
+    .contacts-us .word {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .location,
+    .phone,
+    .mail {
+        justify-content: center;
+        padding: 0 0 7% 0;
+    }
+
+    .inputt input {
+        width: 100%;
+    }
+
+    .inputt textarea {
+        width: 100% !important;
+    }
+
+    #send {
+        width: 100%;
+    }
+}
+
+
+/* ===================== 768px ↓ (Mobil geniş) ===================== */
+@media (max-width: 768px) {
+
+    .con h4,
+    .leaves {
+        margin-bottom: 35px;
+        font-size: 22px;
+    }
+
+    .contacts-us .icon {
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+    }
+
+    .contacts-us .word h5 {
+        font-size: 17px;
+    }
+
+    .contacts-us .word p {
+        font-size: 17px;
+    }
+
+    .inputt input {
+        height: 48px;
+    }
+}
+
+
+/* ===================== 576px ↓ (Tam mobil) ===================== */
+@media (max-width: 576px) {
+
+    .contact {
+        padding-top: 10%;
+    }
+
+    .con h4,
+    .leaves {
+        font-size: 20px;
+        margin-bottom: 28px;
+    }
+
+    .contacts-us .icon {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .location,
+    .phone,
+    .mail {
+        padding: 0 0 12% 0;
+    }
+
+    .contacts-us .word p,
+    .contacts-us .word h5 {
+        font-size: 15px;
+    }
+
+    .inputt input,
+    .inputt textarea {
+        font-size: 15px;
+    }
+
+    #send {
+        height: 48px;
+        font-size: 15px;
+    }
+}
+
+
+/* ===================== 430px ↓ (Kiçik mobil) ===================== */
+@media (max-width: 430px) {
+
+    .inputt input {
+        height: 42px;
+    }
+
+    .contacts-us .icon {
+        width: 55px;
+        height: 55px;
+        line-height: 75px;
+    }
+
+    .contacts-us .word {
+        width: 100%;
+    }
+
+    .leave {
+        width: 90%;
+    }
+
+    .mapif {
+        height: 460px;
+    }
+}
+
+/* rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+#app {
+    height: 100%;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #000;
+    font-family:
+        Helvetica Neue,
+        Helvetica,
+        Arial,
+        sans-serif;
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 600px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
