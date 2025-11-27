@@ -7,6 +7,8 @@ import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
 import Blogs from './pages/Blogs/Blogs'
 import Shop from './pages/Shop/Shop'
+import Login from './pages/Login/Login'
+// import LoginUp from './pages/Login/LoginUp'
 
 
 
@@ -23,6 +25,8 @@ function App() {
             <Route path='/contact' element={<Contact/>} />
             <Route path='/blogs' element={<Blogs/>} />
             <Route path='/shop' element={<Shop/>} />
+            <Route path='/login' element={<Login/>} />
+            {/* <Route path='/loginUp' element={<LoginUp/>} /> */}
 
           </Route>
         </Routes>

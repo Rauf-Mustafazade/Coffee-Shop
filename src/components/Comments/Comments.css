@@ -1,0 +1,162 @@
+#app {
+  height: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family:
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  /* background-color:  !important; */
+}
+
+
+.back-color {
+  background-color: #F1F0EE !important;
+
+  .swiper {
+    width: 80% !important;
+    height: 250px !important;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    background-color: #F1F0EE !important;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 441px !important;
+    height: 235px !important;
+    background-color: #EBE7DF !important;
+
+  }
+
+  .photo {
+    img {
+      width: 150px !important;
+      height: 150px !important;
+      border-radius: 50% !important;
+    }
+  }
+
+  .box {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .left {
+    padding: 0 !important;
+  }
+
+  .swiper-slide img {
+    /* display: block; */
+    width: 100%;
+  }
+}
+
+/* ============================
+   Large Screens (1200px↓)
+=============================== */
+@media (max-width: 1200px) {
+  .back-color .swiper {
+    width: 90% !important;
+  }
+
+  .back-color .swiper-slide {
+    width: 380px !important;
+    height: 220px !important;
+  }
+
+  .back-color .photo img {
+    width: 130px !important;
+    height: 130px !important;
+  }
+}
+
+
+/* ============================
+   Tablet (992px↓)
+=============================== */
+@media (max-width: 992px) {
+  .back-color .swiper {
+    width: 95% !important;
+    height: 230px !important;
+  }
+
+  .back-color .swiper-slide {
+    width: 330px !important;
+    height: 210px !important;
+  }
+
+  .back-color .box {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .back-color .photo img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+}
+
+
+/* ============================
+   Mobile (768px↓)
+=============================== */
+@media (max-width: 768px) {
+  .back-color .swiper {
+    width: 100% !important;
+    height: 220px !important;
+    padding-top: 30px !important;
+  }
+
+  .back-color .swiper-slide {
+    width: 260px !important;
+    height: 200px !important;
+  }
+
+  .back-color .photo img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .back-color .box {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+}
+
+
+/* ============================
+   Small Mobile (480px↓)
+=============================== */
+@media (max-width: 480px) {
+  .back-color .swiper {
+    height: 200px !important;
+  }
+
+  .back-color .swiper-slide {
+    width: 200px !important;
+    height: 180px !important;
+  }
+
+  .back-color .photo img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .back-color .box {
+    flex-direction: column !important;
+  }
+}

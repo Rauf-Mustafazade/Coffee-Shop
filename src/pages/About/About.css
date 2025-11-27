@@ -36,29 +36,199 @@
 
 
 }
-.harvestor{
+
+.harvestor {
     display: flex;
     margin: 0 auto;
     width: 80%;
     padding: 60px 0 60px 0;
 }
-.harvestor-all{
+
+.harvestor-all {
     display: flex;
     gap: 8%;
     text-align: justify;
 }
+
 .harvestor-img {
     img {
         width: 400px;
         min-height: 600px;
     }
 }
-.harvestor-right{
-    h1{
+
+.harvestor-right {
+    h1 {
         margin-bottom: 8%;
     }
-    p{
+
+    p {
         margin-bottom: 7%;
         font-size: 19px;
+    }
+}
+
+/* ===== ABOUT US ===== */
+
+.about-us {
+    width: 100%;
+    background-color: black;
+    font-family: "Montserrat", sans-serif;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about-us h1 {
+    color: yellow;
+    margin-bottom: 2%;
+}
+
+.about-us p {
+    color: white;
+    opacity: .7;
+}
+
+.about-inside {
+    margin: 0 auto !important;
+    width: 80%;
+}
+
+.about-inside p {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+/* ===== HARVESTOR ===== */
+
+.harvestor {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    padding: 60px 0;
+}
+
+.harvestor-all {
+    display: flex;
+    gap: 8%;
+    text-align: justify;
+}
+
+.harvestor-img img {
+    width: 400px;
+    min-height: 600px;
+    object-fit: cover;
+}
+
+.harvestor-right h1 {
+    margin-bottom: 8%;
+}
+
+.harvestor-right p {
+    margin-bottom: 7%;
+    font-size: 19px;
+}
+
+
+/* ========================================================= */
+/* =============== RESPONSIVE =============================== */
+/* ========================================================= */
+
+
+/* TABLET — max-width: 992px */
+@media (max-width: 992px) {
+
+    .about-us {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .about-inside p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .harvestor {
+        padding: 40px 0;
+    }
+
+    .harvestor-img img {
+        width: 330px;
+        min-height: 500px;
+    }
+
+    .harvestor-right p {
+        font-size: 17px;
+    }
+}
+
+
+/* TABLET PORTRAIT — max-width: 768px */
+@media (max-width: 768px) {
+
+    .about-inside {
+        width: 90%;
+    }
+
+    .harvestor {
+        width: 90%;
+    }
+
+    .harvestor-all {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .harvestor-img img {
+        width: 100%;
+        max-width: 360px;
+        min-height: auto;
+    }
+
+    .harvestor-right {
+        margin-top: 30px;
+    }
+
+    .harvestor-right p {
+        font-size: 16px;
+        text-align: justify;
+    }
+}
+
+
+/* MOBILE — max-width: 576px */
+@media (max-width: 576px) {
+
+    .about-us {
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    .about-inside p {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .harvestor-all {
+        gap: 30px;
+    }
+
+    .harvestor-img img {
+        max-width: 100%;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .harvestor-right h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .harvestor-right p {
+        font-size: 15px;
+        margin-bottom: 20px;
     }
 }

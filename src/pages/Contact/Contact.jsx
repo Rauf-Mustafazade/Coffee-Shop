@@ -3,7 +3,7 @@ import './Contact.css'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+// import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
@@ -29,8 +29,9 @@ const Contact = () => {
         <SwiperSlide><img src="https://www.potsandpans.in/cdn/shop/articles/Copy_of_Blog_Templates_-_2024-07-19T124527.718.png?v=1721373464" alt="" /></SwiperSlide>
         <SwiperSlide><img src="https://darkhorsecoffee.co.nz/cdn/shop/files/Untitled_1600_x_600_px_1_1600x.png?v=1752799287" alt="" srcset="" /></SwiperSlide>
         <SwiperSlide><img src="https://www.methodmag.com/asset/1A2ACB3B-D3EE-43D4-86A5E0F68A1F4F1F/fullwidthTopHeight/222d9300aa3ebdc90ec94b94fbdb7718/" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="https://www.desktopbackground.org/download/o/2010/06/23/37781_cup-of-coffee-hd-desktop-wallpapers-high-definition-fullscreen_1600x600_h.jpg" alt="" srcset="" /></SwiperSlide>
-        <SwiperSlide><img src="https://ablazeutk.com/wp-content/uploads/2024/10/Website-3.png" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="https://bluestonelane.com/wp-content/uploads/2017/10/227-Front-V2a-1600x600.jpg" alt="" srcset="" /></SwiperSlide>
+        <SwiperSlide><img src="https://bluestonelane.com/wp-content/uploads/2017/08/46A4730_1-1600x600.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="https://i.pinimg.com/1200x/f4/b4/68/f4b468c720a97521602be6095de1abec.jpg" alt="" /></SwiperSlide>
 
       </Swiper>
 

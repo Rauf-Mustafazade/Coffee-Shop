@@ -279,3 +279,160 @@
         /* при желании можно включить */
     }
 }
+
+/* ============================
+   1200px ↓  (Large tablets / small laptops)
+=============================== */
+@media (max-width: 1200px) {
+
+    .coffee-section__inner {
+        width: 90%;
+    }
+
+    .coffee-card {
+        max-width: 240px;
+    }
+
+    .coffee-card__image-wrapper {
+        height: 260px;
+    }
+}
+
+
+/* ============================
+   992px ↓  (Tablet)
+=============================== */
+@media (max-width: 992px) {
+
+    .coffee-section__title {
+        font-size: 28px;
+    }
+
+    .coffee-section__subtitle {
+        font-size: 13px;
+    }
+
+    .coffee-carousel__track {
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .coffee-card {
+        max-width: 220px;
+    }
+
+    .coffee-card__image-wrapper {
+        height: 240px;
+    }
+
+    /* səhv selector düzəldildi */
+    .coffee-carousel__arrow--left {
+        left: 0;
+    }
+
+    .coffee-carousel__arrow--right {
+        right: 0;
+    }
+}
+
+
+/* ============================
+   768px ↓  (Mobile landscape / small tablets)
+=============================== */
+@media (max-width: 768px) {
+
+    .coffee-section {
+        padding: 35px 0 60px;
+    }
+
+    .coffee-section__title {
+        font-size: 26px;
+    }
+
+    .coffee-section__subtitle {
+        font-size: 12px;
+        margin-bottom: 28px;
+    }
+
+    .coffee-carousel__track {
+        gap: 12px;
+    }
+
+    /* kartlar bir qədər böyüyür, çünki ekran daralır */
+    .coffee-card {
+        max-width: 60%;
+    }
+
+    .coffee-card__image-wrapper {
+        height: 200px;
+    }
+
+    /* oxlar bir az kiçilir */
+    .coffee-carousel__arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 40px;
+    }
+}
+
+
+/* ============================
+   576px ↓  (Mobile phones)
+=============================== */
+@media (max-width: 576px) {
+
+    .coffee-section__inner {
+        width: 92%;
+        padding: 0;
+    }
+
+    .coffee-card {
+        max-width: 80%;
+    }
+
+    .coffee-card__image-wrapper {
+        height: 180px;
+    }
+
+    .coffee-card__title {
+        font-size: 18px;
+    }
+
+    .coffee-card__price {
+        font-size: 20px;
+    }
+
+    .coffee-card__btn {
+        width: 100%;
+    }
+
+    .coffee-carousel__arrow {
+        display: none;
+        /* mobil üçün ideal */
+    }
+}
+
+
+/* ============================
+   420px ↓ (Small phones)
+=============================== */
+@media (max-width: 420px) {
+
+    .coffee-card {
+        max-width: 90%;
+    }
+
+    .coffee-card__image-wrapper {
+        height: 160px;
+    }
+
+    .coffee-card__btn {
+        font-size: 13px;
+        padding: 12px 0;
+    }
+
+    .coffee-section__title {
+        font-size: 22px;
+    }
+}

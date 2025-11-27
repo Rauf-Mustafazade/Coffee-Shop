@@ -5,7 +5,7 @@
     /* padding: 80px 0 120px; */
     overflow: hidden;
     padding: 40px 0 80px 0;
-        background-color: #F1F0EE;
+    background-color: #F1F0EE;
 
 }
 
@@ -61,7 +61,7 @@
 }
 
 /* стрелки */
-.coffee-carousel_arrow--left{
+.coffee-carousel_arrow--left {
     width: 46px;
     height: 46px;
     border-radius: 50%;
@@ -73,7 +73,8 @@
     line-height: 46px;
     text-align: center;
 }
-.coffee-carousel_arrow--right{
+
+.coffee-carousel_arrow--right {
     width: 46px;
     height: 46px;
     border-radius: 50%;
@@ -203,7 +204,7 @@
 .coffee-card__price {
     font-size: 22px;
     font-weight: 700;
-    color:#30261C ;
+    color: #30261C;
 }
 
 .coffee-card__description {
@@ -276,5 +277,157 @@
     .coffee-carousel__arrow {
         display: none;
         /* при желании можно включить */
+    }
+}
+
+/* ============================
+   1200px ↓  (Large tablets / small laptops)
+=============================== */
+@media (max-width: 1200px) {
+
+    .coffee-section__inner {
+        width: 90%;
+    }
+
+    .coffee-card {
+        max-width: 240px;
+    }
+
+    .coffee-card__image-wrapper {
+        height: 250px;
+    }
+}
+
+
+/* ============================
+   992px ↓  (Tablet)
+=============================== */
+@media (max-width: 992px) {
+
+    /* track daha sıx olur */
+    .coffee-carousel__track {
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .coffee-card {
+        max-width: 220px;
+    }
+
+    /* oxlar ekrana daha yaxın */
+    .coffee-carousel__arrow--left {
+        left: -2px;
+    }
+
+    .coffee-carousel__arrow--right {
+        right: -2px;
+    }
+
+    .coffee-card__image-wrapper {
+        height: 230px;
+    }
+}
+
+
+/* ============================
+   768px ↓  (Mobile landscape / small tablets)
+=============================== */
+@media (max-width: 768px) {
+
+    .coffee-section__title {
+        font-size: 26px;
+    }
+
+    .coffee-section__subtitle {
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    /* kart ölçüsü: 2 kart yan-yana və ya slider */
+    .coffee-card {
+        max-width: 60%;
+    }
+
+    .coffee-card__image-wrapper {
+        height: 200px;
+    }
+
+    .coffee-carousel__track {
+        gap: 12px;
+    }
+
+    /* oxlar daha kiçik */
+    .coffee-carousel__arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 40px;
+    }
+}
+
+
+/* ============================
+   576px ↓ (Mobile)
+=============================== */
+@media (max-width: 576px) {
+
+    .coffee-section {
+        padding: 30px 0 60px;
+    }
+
+    .coffee-section__title {
+        font-size: 22px;
+    }
+
+    .coffee-section__subtitle {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    /* yalnız 1 kart ekrana sığır */
+    .coffee-card {
+        max-width: 85%;
+    }
+
+    .coffee-card__image-wrapper {
+        height: 180px;
+    }
+
+    .coffee-card__title {
+        font-size: 18px;
+    }
+
+    .coffee-card__price {
+        font-size: 20px;
+    }
+
+    /* oxlar mobil cihazlarda gizlədilir */
+    .coffee-carousel__arrow {
+        display: none;
+    }
+
+    .coffee-carousel__track {
+        gap: 10px;
+    }
+}
+
+
+/* ============================
+   420px ↓ (Small phones)
+=============================== */
+@media (max-width: 420px) {
+
+    .coffee-card {
+        max-width: 90%;
+    }
+
+    .coffee-card__image-wrapper {
+        height: 160px;
+    }
+
+    .coffee-card__btn {
+        width: 100%;
+        font-size: 13px;
+        padding: 12px 0;
     }
 }

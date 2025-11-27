@@ -5,6 +5,7 @@ import CoffeeCarousel from "../../components/Coffee/CoffeeCarousel.jsx";
 import CoffeeDesert from "../../components/Coffee/CoffeeDesert.jsx";
 import { coffeeProducts } from "../../components/Coffee/CoffeeProduct.js";
 import { coffeeDesert } from "../../components/Coffee/CoffeeDesert.js";
+import  Comments  from "../../components/Comments/Comments.jsx"
 
 import cup2 from '../../assets/Group 2.png'
 import cup3 from '../../assets/Group 3.png'
@@ -53,6 +54,8 @@ const Home = () => {
         </div>
         <img src={beans2} alt="" />
       </section>
+
+      <Comments />
 
       <section className='beans2'>
         <img src={beans3} alt="" />
