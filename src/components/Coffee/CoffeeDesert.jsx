@@ -46,7 +46,7 @@ export default function CoffeeCarousel({ products = [] }) {
                         {canScroll && (
                             <button
                                 className="coffee-carousel_arrow coffee-carousel_arrow--left"
-                                onClick={handlePrev}
+                                onClick={handleNext}
                             >
                                 &#10094;
                             </button>
@@ -81,7 +81,7 @@ export default function CoffeeCarousel({ products = [] }) {
                         {canScroll && (
                             <button
                                 className="coffee-carousel_arrow coffee-carousel_arrow--right"
-                                onClick={handleNext}
+                                onClick={handlePrev}
                             >
                                 &#10095;
                             </button>

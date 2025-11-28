@@ -431,3 +431,21 @@
         padding: 12px 0;
     }
 }
+
+@media (max-width: 576px) {
+    .coffee-carousel__arrow {
+        display: block; /* arrow mobilda görünəcək */
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        line-height: 35px;
+    }
+}
+
+.coffee-carousel__arrow--left {
+    left: 5px;
+}
+
+.coffee-carousel__arrow--right {
+    right: 5px;
+}

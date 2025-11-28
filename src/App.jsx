@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Layout from './components/Layout/Layout'
@@ -8,32 +7,33 @@ import Contact from './pages/Contact/Contact'
 import Blogs from './pages/Blogs/Blogs'
 import Shop from './pages/Shop/Shop'
 import Login from './pages/Login/Login'
-// import LoginUp from './pages/Login/LoginUp'
+import LoginUp from './pages/Login/LoginUp'
 
-
-
+// IMPORT SCROLL TOP BUTTON
+import ScrollToTopButton from './components/Scroll/ScrollToUp.jsx'
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Layout/>}>
-            <Route index element={<Home/>} />
-            <Route path='/about' element={<About/>} />
-            <Route path='/contact' element={<Contact/>} />
-            <Route path='/blogs' element={<Blogs/>} />
-            <Route path='/shop' element={<Shop/>} />
-            <Route path='/login' element={<Login/>} />
-            {/* <Route path='/loginUp' element={<LoginUp/>} /> */}
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/blogs' element={<Blogs />} />
+            <Route path='/shop' element={<Shop />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/loginUp' element={<LoginUp />} />
 
           </Route>
         </Routes>
+
+        {/* КНОПКА SCROLL TO TOP — ВСЕГДА ВИДНА */}
       </BrowserRouter>
+      <ScrollToTopButton />
 
     </>
   )
 }
-
 export default App

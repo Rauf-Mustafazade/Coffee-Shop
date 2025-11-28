@@ -283,7 +283,9 @@
 
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
-
+.home-back{
+    padding: 50px 0;
+}
     .home-word h1 {
         font-size: 32px;
         line-height: 38px;

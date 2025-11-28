@@ -1,4 +1,4 @@
-// src/pages/Login/Login.jsx
+import { Link } from "react-router-dom";
 import React from "react";
 import "./Login.css";
 
@@ -44,9 +44,9 @@ const Login = () => {
                             Sign in
                         </button>
 
-                        {/* <p className="signup-text">
-                            Don’t have an account? <a href="./LoginUp.jsx" ><Link to={"/loginUp"}>Sign Up </Link></a>
-                        </p> */}
+                        <p className="signup-text">
+                            Don’t have an account? <Link to={"/loginUp"}>Sign Up </Link>
+                        </p>
                     </form>
                 </div>
 

@@ -34,68 +34,70 @@ export default function CoffeeCarousel({ products = [] }) {
     return (
         <div className="all">
             <section className="coffee-section">
-            <div className="coffee-section__bg"></div>
+                <div className="coffee-section__bg"></div>
 
-            <div className="coffee-section__inner">
-                <h2 className="coffee-section__title">Our Specials</h2>
-                <p className="coffee-section__subtitle">
-                    Discover our most loved dishes, freshly prepared for you.
-                </p>
+                <div className="coffee-section__inner">
+                    <h2 className="coffee-section__title">Our Specials</h2>
+                    <p className="coffee-section__subtitle">
+                        Discover our most loved dishes, freshly prepared for you.
+                    </p>
 
-                <div className="coffee-carousel">
-                    {canScroll && (
-                        <button
-                            className="coffee-carousel_arrow coffee-carousel_arrow--left"
-                            onClick={handlePrev}
-                        >
-                            &#10094;
-                        </button>
-                    )}
+                    <div className="coffee-carousel">
+                        {canScroll && (
+                            <button
+                                className="coffee-carousel_arrow coffee-carousel_arrow--left"
+                                onClick={handleNext}
+                            >
+                                &#10094;
+                            </button>
+                        )}
 
-                    <div className="coffee-carousel__track">
-                        {visibleItems.map((item) => (
-                            <div className="coffee-card" key={item.id}>
-                                <div className="coffee-card__image-wrapper">
-                                    <img
-                                        src={item.image}
-                                        alt={item.title}
-                                        className="coffee-card__image"
-                                    />
-                                    <button className="coffee-card__heart">♥</button>
-                                </div>
-
-                                <div className="coffee-card__body">
-                                    <div className="coffee-card__header">
-                                        <h3 className="coffee-card__title">{item.title}</h3>
-                                        <span className="coffee-card__price">{item.price}</span>
+                        <div className="coffee-carousel__track">
+                            {visibleItems.map((item) => (
+                                <div className="coffee-card" key={item.id}>
+                                    <div className="coffee-card__image-wrapper">
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            className="coffee-card__image"
+                                        />
+                                        <button className="coffee-card__heart">♥</button>
                                     </div>
-                                    <p className="coffee-card__description">
-                                        {item.description}
-                                    </p>
-                                    <button className="coffee-card__btn">Order now</button>
+
+                                    <div className="coffee-card__body">
+                                        <div className="coffee-card__header">
+                                            <h3 className="coffee-card__title">{item.title}</h3>
+                                            <span className="coffee-card__price">{item.price}</span>
+                                        </div>
+                                        <p className="coffee-card__description">
+                                            {item.description}
+                                        </p>
+                                        <button className="coffee-card__btn">Order now</button>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
+
+                        {canScroll && (
+                            <button
+                                className="coffee-carousel_arrow coffee-carousel_arrow--right"
+                                onClick={handlePrev}
+                            >
+                                &#10095;
+                            </button>
+                        )}
                     </div>
-
-                    {canScroll && (
-                        <button
-                            className="coffee-carousel_arrow coffee-carousel_arrow--right"
-                            onClick={handleNext}
-                        >
-                            &#10095;
-                        </button>
-                    )}
                 </div>
-            </div>
-        </section>
+            </section>
 
-        
+
 
         </div>
-        
+
 
 
 
     );
 }
+
+

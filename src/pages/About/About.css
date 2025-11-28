@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.about-us {
+/* .about-us {
     width: 100%;
     background-color: black;
     font-family: "Montserrat", sans-serif;
@@ -66,7 +66,7 @@
         margin-bottom: 7%;
         font-size: 19px;
     }
-}
+} */
 
 /* ===== ABOUT US ===== */
 
@@ -109,7 +109,10 @@
     width: 80%;
     padding: 60px 0;
 }
-
+.all{
+    background-color:#F1F0EE;
+    color: black;
+}
 .harvestor-all {
     display: flex;
     gap: 8%;
