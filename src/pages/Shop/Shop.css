@@ -1,0 +1,350 @@
+/* src/pages/Shop/Shop.css */
+
+.shop {
+    padding: 3rem 5vw;
+    background: #f5f5f7;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.shop-header {
+    /* max-width: 900px; */
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+
+.shop-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #111827;
+}
+
+.shop-subtitle {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+/* Filters */
+
+.shop-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+
+.shop-search {
+    /* flex: 1 1 260px; */
+    width: 52%;
+    padding: 0.7rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    outline: none;
+    background: #ffffff;
+}
+
+.shop-search:focus {
+    border-color: #4b5563;
+}
+
+.shop-filter-group,
+.shop-price-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.shop-filter-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.shop-filter-btn {
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
+    background: #ffffff;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.shop-filter-btn:hover {
+    border-color: #111827;
+}
+
+.shop-filter-btn.is-active {
+    background: #111827;
+    color: #ffffff;
+    border-color: #111827;
+}
+
+.shop-price-input {
+    width: 90px;
+    padding: 0.4rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    font-size: 0.85rem;
+    outline: none;
+    background: #ffffff;
+}
+
+.shop-price-input:focus {
+    border-color: #4b5563;
+}
+
+/* Grid */
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.shop-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #6b7280;
+}
+
+/* Card */
+
+.shop-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.shop-card-image-wrapper {
+    background: #111827;
+    padding: 1rem 1rem 0.5rem;
+}
+
+.shop-card-image {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+.shop-card-body {
+    padding: 0.85rem 1rem 0.75rem;
+}
+
+.shop-card-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.shop-card-description {
+    font-size: 0.82rem;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+.shop-card-footer {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shop-card-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-card-price-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9ca3af;
+}
+
+.shop-card-price-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Badges */
+
+.shop-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.shop-badge-in {
+    background: #ecfdf3;
+    color: #15803d;
+}
+
+.shop-badge-out {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+/* Card actions */
+
+.shop-card-actions {
+    padding: 0.8rem 1rem 1rem;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.btn-outline,
+.btn-primary {
+    flex: 1;
+    padding: 0.55rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+        transform 0.12s ease;
+}
+
+.btn-outline {
+    background: #ffffff;
+    border-color: #d1d5db;
+    color: #111827;
+}
+
+.btn-outline:hover {
+    border-color: #111827;
+}
+
+.btn-primary {
+    background: #111827;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+/* Detail page */
+
+.shop-detail {
+    padding: 3rem 5vw;
+    background: #f5f5f7;
+    min-height: 100vh;
+}
+
+.shop-back-btn {
+    border: none;
+    background: transparent;
+    color: #4b5563;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.shop-detail-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.shop-detail-image-wrapper {
+    background: #111827;
+    padding: 1.2rem;
+    border-radius: 1.25rem;
+}
+
+.shop-detail-image {
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.shop-detail-info {
+    background: #ffffff;
+    border-radius: 1.25rem;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.1);
+}
+
+.shop-detail-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+
+.shop-detail-description {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.shop-detail-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.shop-detail-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-detail-price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9ca3af;
+}
+
+.shop-detail-price-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.shop-detail-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .shop-detail-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .shop {
+        padding: 2rem 1.5rem;
+    }
+
+    .shop-filters {
+        align-items: stretch;
+    }
+
+    .shop-card-image {
+        height: 190px;
+    }
+}

@@ -42,12 +42,13 @@ header {
 
 
     nav ul li:hover {
-        color: rgb(130, 77, 77);
-        transform: scale(0.9);
+        /* color: rgb(130, 77, 77); */
+        transform: scale(1.05);
+        text-decoration: underline;
     }
 
     nav ul a:hover {
-        color: rgb(130, 77, 77);
+        /* color: rgb(130, 77, 77); */
     }
 
     .login {

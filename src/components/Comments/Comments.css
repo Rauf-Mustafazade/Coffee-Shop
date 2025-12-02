@@ -1,4 +1,4 @@
-#app {
+/* #app {
   height: 100%;
 }
 
@@ -17,7 +17,6 @@ body {
   font-size: 14px;
   margin: 0;
   padding: 0;
-  /* background-color:  !important; */
 }
 
 
@@ -59,14 +58,11 @@ body {
   }
 
   .swiper-slide img {
-    /* display: block; */
     width: 100%;
   }
 }
 
-/* ============================
-   Large Screens (1200px↓)
-=============================== */
+
 @media (max-width: 1200px) {
   .back-color .swiper {
     width: 90% !important;
@@ -84,9 +80,6 @@ body {
 }
 
 
-/* ============================
-   Tablet (992px↓)
-=============================== */
 @media (max-width: 992px) {
   .back-color .swiper {
     width: 95% !important;
@@ -111,9 +104,6 @@ body {
 }
 
 
-/* ============================
-   Mobile (768px↓)
-=============================== */
 @media (max-width: 768px) {
   .back-color .swiper {
     width: 100% !important;
@@ -138,9 +128,7 @@ body {
 }
 
 
-/* ============================
-   Small Mobile (480px↓)
-=============================== */
+
 @media (max-width: 480px) {
   .back-color .swiper {
     height: 200px !important;
@@ -158,5 +146,218 @@ body {
 
   .back-color .box {
     flex-direction: column !important;
+  }
+} */
+.customers-container {
+  width: 100%;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customers-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.customers-text h1 {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 600;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+.customers-text p {
+  font-family: Poppins;
+  color: #616161;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 900px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-card {
+  width: 540px;
+  height: 250px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  display: flex;
+  gap: 25px;
+  padding: 25px;
+  position: absolute;
+  transition: 0.4s ease;
+  opacity: 0;
+  transform: scale(0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-card.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
+}
+
+.customer-card.left {
+  opacity: 0.4;
+  transform: translateX(-260px) scale(0.9);
+  z-index: 5;
+}
+
+.customer-card.right {
+  opacity: 0.4;
+  transform: translateX(260px) scale(0.9);
+  z-index: 5;
+}
+
+.customer-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-content p {
+  font-family: Poppins;
+  font-size: 14px;
+  color: #555;
+  max-width: 330px;
+  width: 100%;
+}
+
+.stars {
+  color: #ffb300;
+  font-size: 18px;
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.card-job {
+  font-size: 14px;
+  color: #777;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.nav-buttons button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+  background: black;
+  color: white;
+}
+
+.customers-container {
+  background-color: #F1F0EE;
+}
+
+@media (max-width: 1024px) {
+  .slider-wrapper {
+    width: 100%;
+    height: 330px;
+  }
+
+  .customer-card {
+    width: 85%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .customer-card.left,
+  .customer-card.right {
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .customers-text h1 {
+    font-size: 26px;
+  }
+
+  .slider-wrapper {
+    height: auto;
+  }
+
+  .customer-card {
+    position: relative;
+    transform: none !important;
+    opacity: 1 !important;
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .customer-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card-content p {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .nav-buttons {
+    margin-top: 20px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .customers-text h1 {
+    font-size: 22px;
+  }
+
+  .customer-card img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .nav-buttons button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
   }
 }

@@ -26,7 +26,7 @@ const Blogs = () => {
         <div className="blog-video">
           <div className="blog-left">
             <img src="https://i.pinimg.com/1200x/2b/5a/49/2b5a4927d53e78992073b3d7b7cc9c6b.jpg" />
-            <a href="https://www.youtube.com/watch?v=AUUj47USB8k" target='blank'><i className="fa-regular fa-circle-play blog-icon"></i></a>
+           {/* <Iframe src="https://www.youtube.com/embed/AUUj47USB8k"></Iframe> */}
 
           </div>
           <div className="blog-right">

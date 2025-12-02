@@ -199,7 +199,7 @@
 }
 
 .chat-footer .chat-form:focus-within {
-    outline: 2px solid #6D4FC2;
+    outline: 2px solid #ad7032;
 }
 
 .chat-form .message-input {
@@ -299,6 +299,19 @@
 
 .header-info svg {
     background-color: rgb(209, 90, 90);
-    color: #30261C ;
+    color: #30261C;
 
+}
+
+.chat-body .user-message .message-text {
+    background-color: #ad7032;
+
+}
+
+.chat-form .message-input:valid~button {
+    background-color: #ad7032;
+
+}
+.chat-form .message-input{
+    
 }

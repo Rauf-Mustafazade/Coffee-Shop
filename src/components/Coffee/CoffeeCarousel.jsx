@@ -1,4 +1,3 @@
-// src/components/CoffeeCarousel.jsx
 import { useState } from "react";
 import "./CoffeeCarousel.css";
 
@@ -12,23 +11,20 @@ export default function CoffeeCarousel({ products = [] }) {
 
     const canScroll = total > visibleCount;
 
-    // показываем 4 карточки по кругу
     const visibleItems = [];
     for (let i = 0; i < Math.min(visibleCount, total); i++) {
         const index = (startIndex + i) % total;
         visibleItems.push(products[index]);
     }
 
-    const handleNext = () => {
-        if (!canScroll) return;
-        // вправо: 1 2 3 4 → 8 1 2 3
-        setStartIndex((prev) => (prev - 1 + total) % total);
-    };
-
     const handlePrev = () => {
         if (!canScroll) return;
-        // влево: 1 2 3 4 → 2 3 4 5
-        setStartIndex((prev) => (prev + 1) % total);
+        setStartIndex((prev) => (prev - 1 + total) % total); // ← влево
+    };
+
+    const handleNext = () => {
+        if (!canScroll) return;
+        setStartIndex((prev) => (prev + 1) % total); // → вправо
     };
 
     return (
@@ -43,10 +39,11 @@ export default function CoffeeCarousel({ products = [] }) {
                     </p>
 
                     <div className="coffee-carousel">
+
                         {canScroll && (
                             <button
                                 className="coffee-carousel_arrow coffee-carousel_arrow--left"
-                                onClick={handleNext}
+                                onClick={handlePrev}
                             >
                                 &#10094;
                             </button>
@@ -81,23 +78,15 @@ export default function CoffeeCarousel({ products = [] }) {
                         {canScroll && (
                             <button
                                 className="coffee-carousel_arrow coffee-carousel_arrow--right"
-                                onClick={handlePrev}
+                                onClick={handleNext}
                             >
                                 &#10095;
                             </button>
                         )}
+
                     </div>
                 </div>
             </section>
-
-
-
         </div>
-
-
-
-
     );
 }
-
-
