@@ -9,6 +9,9 @@ const Shop = () => {
   const [maxPrice, setMaxPrice] = useState('');
   const [selectedProduct, setSelectedProduct] = useState(null);
 
+  // 👇 ДОБАВЛЕНО — сколько показывать карточек
+  const [visibleCount, setVisibleCount] = useState(5);
+
   // Фильтрация карточек
   const filteredProducts = products.filter((product) => {
     const term = searchTerm.toLowerCase().trim();
@@ -28,6 +31,9 @@ const Shop = () => {
 
     return matchesSearch && matchesAvailability && matchesPrice;
   });
+
+  // 👇 ДОБАВЛЕНО — видимые карточки
+  const visibleProducts = filteredProducts.slice(0, visibleCount);
 
   // Если выбран продукт -> показываем “детальную страницу”
   if (selectedProduct) {
@@ -151,7 +157,8 @@ const Shop = () => {
           <p className="shop-empty">No products match your filters.</p>
         )}
 
-        {filteredProducts.map((product) => (
+        {/* 👇 ИЗМЕНЕНО: вместо filteredProducts → visibleProducts */}
+        {visibleProducts.map((product) => (
           <article className="shop-card" key={product.id}>
             <div className="shop-card-image-wrapper">
               <img
@@ -196,6 +203,18 @@ const Shop = () => {
           </article>
         ))}
       </div>
+
+      {/* 👇 ДОБАВЛЕНА КНОПКА MORE */}
+      {visibleCount < filteredProducts.length && (
+        <div className="shop-more-wrapper">
+          <button
+            className="shop-more-btn"
+            onClick={() => setVisibleCount(visibleCount + 5)}
+          >
+            More
+          </button>
+        </div>
+      )}
     </section>
   );
 };

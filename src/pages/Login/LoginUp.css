@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     gap: 90px;
-    padding: 60px 40px;
+    padding: 140px 40px;
     /* max-width: 1200px; */
     margin: 0 auto;
     /* min-height: 100vh; */
@@ -227,6 +227,7 @@
 @media (max-width: 600px) {
     .loginUp {
         padding: 20px;
+        padding-top: 90px;
     }
 
     .right {

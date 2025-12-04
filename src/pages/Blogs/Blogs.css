@@ -90,6 +90,10 @@
     }
 }
 
+.blog-container {
+    padding-top: 130px;
+}
+
 .video {
     background-color: #F1F0EE;
     width: 100%;
@@ -115,7 +119,7 @@
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
-    .blog-icon {
+    #blog-icon {
         position: absolute;
         font-size: 58px;
         color: #F1F0EE;
@@ -204,6 +208,9 @@
 /* ------------------------------- */
 
 @media (max-width: 480px) {
+    .blog-container {
+        padding-top: 90px;
+    }
 
     .blog-container h1 {
         font-size: 28px;

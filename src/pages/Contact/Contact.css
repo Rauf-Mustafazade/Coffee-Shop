@@ -1,3 +1,7 @@
+.contact-all {
+    padding-top: 80px;
+}
+
 .contact {
     /* margin-bottom: 7%; */
     /* margin-top: 7%; */
@@ -265,6 +269,9 @@ button:hover {
 
 /* ===================== 430px ↓ (Kiçik mobil) ===================== */
 @media (max-width: 430px) {
+    .contact-all {
+        padding-top: 80px;
+    }
 
     .inputt input {
         height: 42px;
@@ -301,16 +308,16 @@ body {
 }
 
 body {
-      background: #000;
-  font-family:
-    Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-  font-size: 14px;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+    background: #000;
+    font-family:
+        Helvetica Neue,
+        Helvetica,
+        Arial,
+        sans-serif;
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .swiper {

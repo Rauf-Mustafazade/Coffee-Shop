@@ -1,55 +1,93 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./LoginUp.css";
 
 const LoginUp = () => {
+    const navigate = useNavigate();
+
+    const handleSignUp = (e) => {
+        e.preventDefault();
+
+        const fullName = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        const terms = document.getElementById("terms").checked;
+
+        if (!fullName || !email || !password || !confirmPassword) {
+            alert("Please fill all fields");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return;
+        }
+
+        if (!terms) {
+            alert("You must accept terms & conditions");
+            return;
+        }
+
+        // Получаем текущих пользователей
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+
+        if (users.some(u => u.email === email)) {
+            alert("User with this email already exists");
+            return;
+        }
+
+        const newUser = { fullName, email, password };
+        users.push(newUser);
+
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("Account created successfully!");
+
+        // После регистрации сразу логиним пользователя
+        localStorage.setItem("loggedIn", "true");
+        localStorage.setItem("currentUser", JSON.stringify(newUser));
+
+        navigate("/shop"); // редирект на защищённую страницу
+    };
+
     return (
         <div className="loginUp">
             <div className="left">
                 <h1>Create account</h1>
                 <p>Join and meet the good taste today</p>
 
-                <div>
-                    <label htmlFor="fullName">Full name</label>
-                    <input
-                        id="fullName"
-                        type="text"
-                        placeholder="Enter your full name"
-                    />
-                </div>
+                <form onSubmit={handleSignUp}>
+                    <div>
+                        <label htmlFor="fullName">Full name</label>
+                        <input id="fullName" type="text" placeholder="Enter your full name" />
+                    </div>
 
-                <div>
-                    <label htmlFor="email">Email</label>
-                    <input id="email" type="email" placeholder="Enter your e-mail" />
-                </div>
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <input id="email" type="email" placeholder="Enter your e-mail" />
+                    </div>
 
-                <div>
-                    <label htmlFor="password">Password</label>
-                    <input
-                        id="password"
-                        type="password"
-                        placeholder="Create a password"
-                    />
-                </div>
+                    <div>
+                        <label htmlFor="password">Password</label>
+                        <input id="password" type="password" placeholder="Create a password" />
+                    </div>
 
-                <div>
-                    <label htmlFor="confirmPassword">Confirm password</label>
-                    <input
-                        id="confirmPassword"
-                        type="password"
-                        placeholder="Confirm your password"
-                    />
-                </div>
+                    <div>
+                        <label htmlFor="confirmPassword">Confirm password</label>
+                        <input id="confirmPassword" type="password" placeholder="Confirm your password" />
+                    </div>
 
-                <div className="checkbox">
-                    <input id="terms" type="checkbox" />
-                    <label htmlFor="terms">I accept the terms & conditions</label>
-                </div>
+                    <div className="checkbox">
+                        <input id="terms" type="checkbox" />
+                        <label htmlFor="terms">I accept the terms & conditions</label>
+                    </div>
 
-                <button type="submit">Sign up</button>
+                    <button type="submit">Sign up</button>
 
-                <p>
-                    Already have an account? <a href="/login">Sign in</a>
-                </p>
+                    <p>
+                        Already have an account? <a href="/login">Sign in</a>
+                    </p>
+                </form>
             </div>
 
             <div className="right">

@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     background: var(--bg-page);
-    padding: 0 16px;
+    padding: 80px 16px;
 }
 
 .login-card {
@@ -173,6 +173,7 @@
     .login-page {
         height: auto;
         padding: 24px 12px;
+        padding-top: 90px;
     }
 
     .login-card {

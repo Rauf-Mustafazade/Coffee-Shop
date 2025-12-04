@@ -1,7 +1,7 @@
 export const coffeeDesert = [
   {
     id: 1,
-    title: "Classic Cheesecake",
+    title: "Cheesecake",
     price: "$7",
     description: "Creamy vanilla cheesecake with crust",
     image: "https://i.pinimg.com/1200x/de/a0/1a/dea01a87b4e0389b06ea43a19e6af30c.jpg",
@@ -36,7 +36,7 @@ export const coffeeDesert = [
   },
   {
     id: 6,
-    title: "Chocolate Lava Cake",
+    title: "Chocolate Lava ",
     price: "$8",
     description: "Warm cake with molten center",
     image: "https://i.pinimg.com/736x/ef/bc/8e/efbc8e27d543d6fa0c0559967c104896.jpg",

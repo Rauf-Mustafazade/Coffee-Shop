@@ -80,21 +80,21 @@ import "./Comments.css";
 
 const customersData = [
     {
-        img: "https://i.pravatar.cc/150?img=1",
+        img: "https://i.pinimg.com/736x/ff/1b/3f/ff1b3f0328e01b31e53470c5bad27c21.jpg",
         text: "You won’t regret it. I would like to personally thank you for your outstanding product. Absolutely wonderful!",
         name: "James K.",
         job: "Customer",
         stars: 5
     },
     {
-        img: "https://i.pravatar.cc/150?img=5",
+        img: "https://i.pinimg.com/1200x/3e/36/7c/3e367c3543973c5824d1d09dacc7d5d1.jpg",
         text: "Just what I was looking for. Thank you for making it painless and pleasant. All products are great.",
         name: "Megen W.",
         job: "Customer",
         stars: 5
     },
     {
-        img: "https://i.pravatar.cc/150?img=10",
+        img: "https://i.pinimg.com/736x/d4/70/95/d47095e467200505f3249894e1cd92f7.jpg",
         text: "I am really satisfied with your service. This is simply unbelievable! I recommend it to everyone.",
         name: "Alicia R.",
         job: "Customer",

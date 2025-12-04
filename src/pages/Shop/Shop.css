@@ -6,7 +6,9 @@
     min-height: 100vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
-
+.shop{
+    padding-top: 120px;
+}
 .shop-header {
     /* max-width: 900px; */
     margin: 0 auto 2rem;
@@ -38,8 +40,8 @@
 
 
 .shop-search {
-    /* flex: 1 1 260px; */
-    width: 52%;
+    flex: 1 1 260px;
+    /* width: 52%; */
     padding: 0.7rem 0.9rem;
     border-radius: 999px;
     border: 1px solid #d1d5db;
@@ -338,6 +340,7 @@
 @media (max-width: 640px) {
     .shop {
         padding: 2rem 1.5rem;
+        padding-top: 90px;
     }
 
     .shop-filters {
@@ -347,4 +350,27 @@
     .shop-card-image {
         height: 190px;
     }
+}
+
+/* more  add more */
+.shop-more-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.shop-more-btn {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 999px;
+    background: #111827;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.shop-more-btn:hover {
+    background: #000;
+    transform: translateY(-2px);
 }

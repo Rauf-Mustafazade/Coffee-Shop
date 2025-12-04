@@ -17,7 +17,7 @@
 
 .chatbot-popup {
     opacity: 0;
-    z-index: 1;
+    z-index: 999;
     pointer-events: none;
     position: fixed;
     bottom: 90px;
@@ -312,6 +312,6 @@
     background-color: #ad7032;
 
 }
-.chat-form .message-input{
+/* .chat-form .message-input{
     
-}
+} */

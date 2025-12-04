@@ -19,12 +19,12 @@ export default function CoffeeCarousel({ products = [] }) {
 
     const handlePrev = () => {
         if (!canScroll) return;
-        setStartIndex((prev) => (prev - 1 + total) % total); // ← влево
+        setStartIndex((prev) => (prev - 1 + total) % total);
     };
 
     const handleNext = () => {
         if (!canScroll) return;
-        setStartIndex((prev) => (prev + 1) % total); // → вправо
+        setStartIndex((prev) => (prev + 1) % total);
     };
 
     return (
@@ -39,7 +39,6 @@ export default function CoffeeCarousel({ products = [] }) {
                     </p>
 
                     <div className="coffee-carousel">
-
                         {canScroll && (
                             <button
                                 className="coffee-carousel_arrow coffee-carousel_arrow--left"
@@ -50,29 +49,46 @@ export default function CoffeeCarousel({ products = [] }) {
                         )}
 
                         <div className="coffee-carousel__track">
-                            {visibleItems.map((item) => (
-                                <div className="coffee-card" key={item.id}>
-                                    <div className="coffee-card__image-wrapper">
-                                        <img
-                                            src={item.image}
-                                            alt={item.title}
-                                            className="coffee-card__image"
-                                        />
-                                        <button className="coffee-card__heart">♥</button>
-                                    </div>
 
-                                    <div className="coffee-card__body">
-                                        <div className="coffee-card__header">
-                                            <h3 className="coffee-card__title">{item.title}</h3>
-                                            <span className="coffee-card__price">{item.price}</span>
+                            {visibleItems.map((item) => {
+                                // ← вот тут правильно!
+                                const [isLoaded, setIsLoaded] = useState(false);
+
+                                return (
+                                    <div className="coffee-card" key={item.id}>
+                                        <div className="coffee-card__image-wrapper">
+
+                                            {!isLoaded && (
+                                                <img
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif?20170503175831"
+                                                    alt="Loading..."
+                                                    className="coffee-card__image coffee-card__loader"
+                                                />
+                                            )}
+
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="coffee-card__image"
+                                                style={{ display: isLoaded ? "block" : "none" }}
+                                                onLoad={() => setIsLoaded(true)}
+                                            />
+
+                                            <button className="coffee-card__heart">♥</button>
                                         </div>
-                                        <p className="coffee-card__description">
-                                            {item.description}
-                                        </p>
-                                        <button className="coffee-card__btn">Order now</button>
+
+                                        <div className="coffee-card__body">
+                                            <div className="coffee-card__header">
+                                                <h3 className="coffee-card__title">{item.title}</h3>
+                                                <span className="coffee-card__price">{item.price}</span>
+                                            </div>
+                                            <p className="coffee-card__description">{item.description}</p>
+                                            <button className="coffee-card__btn">Order now</button>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                );
+                            })}
+
                         </div>
 
                         {canScroll && (
@@ -83,7 +99,6 @@ export default function CoffeeCarousel({ products = [] }) {
                                 &#10095;
                             </button>
                         )}
-
                     </div>
                 </div>
             </section>

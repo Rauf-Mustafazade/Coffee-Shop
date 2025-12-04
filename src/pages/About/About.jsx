@@ -1,6 +1,7 @@
 import React from 'react'
 import './About.css'
 import coffeeImg from '../../assets/coffee-shop.jpg'
+import StatsSection from '../../components/StatsSection/StatsSection'
 const About = () => {
   return (
     <div>
@@ -34,6 +35,7 @@ const About = () => {
             have a huge capacity to meet market demand and are working towards a greater impact.</p>
         </div>
       </div>
+      <StatsSection />
       <div className="all">
         <div className="harvestor">
           <div className="harvestor-all">

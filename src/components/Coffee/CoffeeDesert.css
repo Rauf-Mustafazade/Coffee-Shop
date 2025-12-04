@@ -436,3 +436,9 @@
         font-size: 22px;
     }
 }
+
+/* loading */
+.coffee-card__loader{
+    width: 120px;
+    height: 120px;
+}

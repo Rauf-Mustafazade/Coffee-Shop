@@ -13,6 +13,7 @@
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    padding-top: 80px;
 }
 
 .home-word {
@@ -285,6 +286,7 @@
 @media (max-width: 480px) {
 .home-back{
     padding: 50px 0;
+    padding-top: 80px;
 }
     .home-word h1 {
         font-size: 32px;

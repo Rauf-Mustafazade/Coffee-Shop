@@ -25,8 +25,12 @@ const Blogs = () => {
       <section className='video'>
         <div className="blog-video">
           <div className="blog-left">
-            <img src="https://i.pinimg.com/1200x/2b/5a/49/2b5a4927d53e78992073b3d7b7cc9c6b.jpg" />
-           {/* <Iframe src="https://www.youtube.com/embed/AUUj47USB8k"></Iframe> */}
+            
+            <a href="https://www.youtube.com/watch?v=AUUj47USB8k" target="_blank" rel="noopener noreferrer">
+              <i id="blog-icon" class="fa-regular fa-circle-play"></i>
+              <img src="https://i.pinimg.com/1200x/2b/5a/49/2b5a4927d53e78992073b3d7b7cc9c6b.jpg" />
+              </a>
+           {/* <iframe src="https://www.youtube.com/embed/AUUj47USB8k"></iframe> */}
 
           </div>
           <div className="blog-right">

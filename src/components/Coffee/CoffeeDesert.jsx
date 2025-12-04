@@ -21,13 +21,11 @@ export default function CoffeeCarousel({ products = [] }) {
 
     const handleNext = () => {
         if (!canScroll) return;
-        // вправо: 1 2 3 4 → 8 1 2 3
         setStartIndex((prev) => (prev - 1 + total) % total);
     };
 
     const handlePrev = () => {
         if (!canScroll) return;
-        // влево: 1 2 3 4 → 2 3 4 5
         setStartIndex((prev) => (prev + 1) % total);
     };
 
@@ -53,29 +51,45 @@ export default function CoffeeCarousel({ products = [] }) {
                         )}
 
                         <div className="coffee-carousel__track">
-                            {visibleItems.map((item) => (
-                                <div className="coffee-card" key={item.id}>
-                                    <div className="coffee-card__image-wrapper">
-                                        <img
-                                            src={item.image}
-                                            alt={item.title}
-                                            className="coffee-card__image"
-                                        />
-                                        <button className="coffee-card__heart">♥</button>
-                                    </div>
+                            {visibleItems.map((item) => {
+                                const [isLoaded, setIsLoaded] = useState(false);
 
-                                    <div className="coffee-card__body">
-                                        <div className="coffee-card__header">
-                                            <h3 className="coffee-card__title">{item.title}</h3>
-                                            <span className="coffee-card__price">{item.price}</span>
+                                return (
+                                    <div className="coffee-card" key={item.id}>
+                                        <div className="coffee-card__image-wrapper">
+
+                                            {!isLoaded && (
+                                                <img
+                                                    src="https://i.gifer.com/ZZ5H.gif"
+                                                    alt="Loading..."
+                                                    className="coffee-card__loader"
+                                                />
+                                            )}
+
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="coffee-card__image"
+                                                style={{ display: isLoaded ? "block" : "none" }}
+                                                onLoad={() => setIsLoaded(true)}
+                                            />
+
+                                            <button className="coffee-card__heart">♥</button>
                                         </div>
-                                        <p className="coffee-card__description">
-                                            {item.description}
-                                        </p>
-                                        <button className="coffee-card__btn">Order now</button>
+
+                                        <div className="coffee-card__body">
+                                            <div className="coffee-card__header">
+                                                <h3 className="coffee-card__title">{item.title}</h3>
+                                                <span className="coffee-card__price">{item.price}</span>
+                                            </div>
+                                            <p className="coffee-card__description">
+                                                {item.description}
+                                            </p>
+                                            <button className="coffee-card__btn">Order now</button>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
 
                         {canScroll && (
@@ -89,13 +103,6 @@ export default function CoffeeCarousel({ products = [] }) {
                     </div>
                 </div>
             </section>
-
-            
-
         </div>
-
-
-
-
     );
 }

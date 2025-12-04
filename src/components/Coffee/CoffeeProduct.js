@@ -11,7 +11,7 @@ export const coffeeProducts = [
         title: "Flat White",
         price: "$5",
         description:
-            "Smooth espresso with velvety microfoam — perfect balance and flavor.",
+            "Smooth espresso with  microfoam — perfect balance and flavor.",
         image: "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg",
     },
     {
@@ -73,7 +73,7 @@ export const coffeeProducts = [
     },
     {
         id: 10,
-        title: "Pumpkin Spice Latte",
+        title: "Pumpkin  Latte",
         price: "$7",
         description:
             "Autumn classic with cinnamon, nutmeg, pumpkin cream and espresso.",
