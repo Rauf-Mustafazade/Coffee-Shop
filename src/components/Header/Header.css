@@ -24,9 +24,11 @@ header {
     font-size: 1.8rem;
     font-weight: 700;
 }
-.logo{
+
+.logo {
     margin-right: 29%;
 }
+
 /* Nav menu */
 nav ul {
     width: 100%;
@@ -39,15 +41,26 @@ nav ul {
     align-items: center;
 }
 
-nav ul li a {
+/* Ümumi linklər */
+.link {
     color: white;
     text-decoration: none;
-    transition: transform 0.2s;
+    transition: 0.2s;
 }
 
-nav ul li:hover a {
+/* Hover effekti */
+/* nav ul li:hover .link {
     transform: scale(1.05);
     text-decoration: underline;
+} */
+
+/* ACTIVE CLASS */
+.active {
+    color: #ffdb96;
+    /* aktiv olduqda rəng */
+    font-weight: 600;
+    border-bottom: 2px solid #ffdb96;
+    padding-bottom: 3px;
 }
 
 /* Login button */
@@ -60,10 +73,12 @@ nav ul li:hover a {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white !important;
+
 }
 
 .login a {
-    color: white;
+    color: white !important;
     font-size: 15px;
     font-weight: 400;
     text-decoration: none;

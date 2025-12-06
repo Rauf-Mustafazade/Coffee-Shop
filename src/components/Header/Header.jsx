@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,12 +38,12 @@ const Header = () => {
         {/* Navigation links */}
         <nav>
           <ul className={menuOpen ? 'active' : ''}>
-            <li><Link to="/">HOME</Link></li>
-            <li><Link to="/about">ABOUT</Link></li>
-            <li><Link to="/blogs">BLOGS</Link></li>
-            <li><Link to="/shop">SHOP</Link></li>
-            <li><Link to="/contact">CONTACT</Link></li>
-            <li><Link className="login" to="/login">LOGIN</Link></li>
+            <li><NavLink to="/" className={({ isActive }) => (isActive ? "link active" : "link")}>HOME</NavLink></li>
+            <li><NavLink to="/about" className={({ isActive }) => (isActive ? "link active" : "link")}>ABOUT</NavLink></li>
+            <li><NavLink to="/blogs" className={({ isActive }) => (isActive ? "link active" : "link")}>BLOGS</NavLink></li>
+            <li><NavLink to="/shop" className={({ isActive }) => (isActive ? "link active" : "link")}>SHOP</NavLink></li>
+            <li><NavLink to="/contact" className={({ isActive }) => (isActive ? "link active" : "link")}>CONTACT</NavLink></li>
+            <li><NavLink className="login" to="/login">LOGIN</NavLink></li>
           </ul>
         </nav>
       </div>

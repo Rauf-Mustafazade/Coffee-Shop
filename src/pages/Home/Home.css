@@ -284,10 +284,11 @@
 
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
-.home-back{
-    padding: 50px 0;
-    padding-top: 80px;
-}
+    .home-back {
+        padding: 50px 0;
+        padding-top: 100px;
+    }
+
     .home-word h1 {
         font-size: 32px;
         line-height: 38px;
@@ -303,9 +304,26 @@
         padding: 10px;
     }
 
+    .beans {
+        img {
+            display: none;
+        }
+        .beans-center {
+        h1 {
+            font-size: 36px;
+        }
+    }
+    }
+.beans2{
+    img{
+        display: none;
+    }
+}
     .beans-center2 p {
         font-size: 16px;
     }
+
+    
 
     .beans-center2 button {
         width: 120px;

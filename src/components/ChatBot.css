@@ -89,7 +89,7 @@
 
 .chat-body {
     padding: 25px 22px;
-    height: 460px;
+    height: 370px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
