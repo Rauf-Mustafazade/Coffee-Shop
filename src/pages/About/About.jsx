@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 import coffeeImg from '../../assets/coffee-shop.jpg'
-import StatsSection from '../../components/StatsSection/StatsSection'
+import StatsSection from '../../components/StatsSection/StatsSection.jsx'
 const About = () => {
   return (
     <div>
